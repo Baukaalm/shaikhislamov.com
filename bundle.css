@@ -457,7 +457,7 @@ button:focus {
   pointer-events: none; }
 
 .hero > div {
-  background: #005b96 url("/public/img/bg.jpg") no-repeat 50% 0;
+  background: #005b96 url("/../public/img/bg.jpg") no-repeat 50% 0;
   background-size: cover;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
@@ -595,7 +595,7 @@ button:focus {
   margin: 0 0 0 -15px;
   left: 50%;
   top: 10px;
-  background: url("/public/img/arrow-colored.svg") no-repeat center center;
+  background: url("/../public/img/arrow-colored.svg") no-repeat center center;
   -webkit-transition: -webkit-transform 0.5s, opacity 0.3s;
   transition: transform 0.5s, opacity 0.3s;
   -webkit-transition-timing-function: cubic-bezier(0.6, 0, 0.4, 1);
@@ -612,7 +612,7 @@ button:focus {
 .stack.stack-next .stack-title::after {
   content: '';
   top: 1.65em;
-  background: url("/public/img/arrow-gray.svg") no-repeat center center; }
+  background: url("/../public/img/arrow-gray.svg") no-repeat center center; }
 
 .stack.stack-prev .stack-title::after {
   right: 0;
