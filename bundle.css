@@ -457,7 +457,7 @@ button:focus {
   pointer-events: none; }
 
 .hero > div {
-  background: #005b96 url("/../public/img/bg.jpg") no-repeat 50% 0;
+  background: url("/../public/img/bg.jpg") no-repeat 50% 0;
   background-size: cover;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
