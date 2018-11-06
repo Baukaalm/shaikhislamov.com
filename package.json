@@ -1,16 +1,14 @@
 {
-  "name": "webpack-starter",
+  "name": "shaikhislamov.com",
   "version": "1.0.0",
-  "description": "A light foundation for your next frontend project based on webpack.",
+  "description": "Personal site",
+  "homepage": "https://github.com/Baukaalm/shaikhislamov.com",
   "scripts": {
     "build": "webpack --config webpack/webpack.config.prod.js  --colors",
     "start": "webpack-dev-server --open --config webpack/webpack.config.dev.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wbkd/webpack-starter.git"
-  },
-  "keywords": [
+ 
+  "keywords": [ 
     "webpack",
     "startkit",
     "frontend",
@@ -20,9 +18,6 @@
   ],
   "author": "webkid.io",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/wbkd/webpack-starter/issues"
-  },
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
