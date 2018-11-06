@@ -335,7 +335,8 @@ body {
   overflow-y: scroll;
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent; }
 
 a {
   color: #fff;
@@ -692,7 +693,7 @@ button:focus {
   transform: translate3d(0, -150%, 0); }
 
 .item {
-  padding: 0 5% 5%;
+  padding: 0 0 5%;
   opacity: 0;
   width: 100%;
   position: relative;
@@ -702,7 +703,8 @@ button:focus {
   -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
   transition: transform 0.5s, opacity 0.5s;
   -webkit-transition-timing-function: cubic-bezier(0.6, 0, 0.4, 1);
-  transition-timing-function: cubic-bezier(0.6, 0, 0.4, 1); }
+  transition-timing-function: cubic-bezier(0.6, 0, 0.4, 1);
+  will-change: transform; }
 
 .move-items .is-selected .item {
   opacity: 1; }
