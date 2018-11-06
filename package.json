@@ -49,6 +49,7 @@
     "@babel/polyfill": "^7.0.0",
     "classie": "^1.0.0",
     "flickity": "^2.1.2",
+    "gh-pages": "^2.0.1",
     "imagesloaded": "^4.1.4",
     "modernizr": "^3.6.0",
     "smoothscroll": "^0.4.0",
