@@ -460,6 +460,7 @@ button:focus {
 .hero > div {
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 100% 0%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
 
