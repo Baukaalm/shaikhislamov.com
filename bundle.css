@@ -327,7 +327,7 @@ http://flickity.metafizzy.co
 
 /* General styles */
 body {
-  background: linear-gradient(to left, #050b1d, #140a0b);
+  background: linear-gradient(to left, #050b1d, black);
   color: #fff;
   font-size: 1em;
   overflow: hidden;
@@ -458,7 +458,7 @@ button:focus {
   pointer-events: none; }
 
 .hero > div {
-  background: url("/public/img/bg.jpg") no-repeat 50% 0;
+  background-repeat: no-repeat;
   background-size: cover;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
@@ -958,6 +958,38 @@ button:focus {
     height: 60vh;
     -webkit-transform: translate3d(0, 40vh, 0);
     transform: translate3d(0, 40vh, 0); } }
+
+.progressive {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  outline: none; }
+
+.progressive img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  border: 0 none; }
+
+.progressive img.preview {
+  filter: blur(2vw);
+  transform: scale(1.05); }
+
+.progressive img.reveal {
+  position: absolute;
+  left: 0;
+  top: 0;
+  will-change: transform, opacity;
+  animation: progressiveReveal 1s ease-out; }
+
+@keyframes progressiveReveal {
+  0% {
+    transform: scale(1.05);
+    opacity: 0; }
+  100% {
+    transform: scale(1);
+    opacity: 1; } }
 
 
 /*# sourceMappingURL=bundle.css.map*/
