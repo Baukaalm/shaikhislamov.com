@@ -5,10 +5,11 @@
   "homepage": "https://github.com/Baukaalm/shaikhislamov.com",
   "scripts": {
     "build": "webpack --config webpack/webpack.config.prod.js  --colors",
-    "start": "webpack-dev-server --open --config webpack/webpack.config.dev.js"
+    "start": "webpack-dev-server --open --config webpack/webpack.config.dev.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
- 
-  "keywords": [ 
+  "keywords": [
     "webpack",
     "startkit",
     "frontend",
@@ -19,34 +20,40 @@
   "author": "webkid.io",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.1.2",
-    "@babel/plugin-proposal-class-properties": "^7.1.0",
-    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
-    "@babel/preset-env": "^7.1.0",
-    "babel-loader": "^8.0.4",
+    "@babel/core": "^7.3.3",
+    "@babel/plugin-proposal-class-properties": "^7.3.3",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.3.1",
+    "babel-loader": "^8.0.5",
     "clean-webpack-plugin": "^0.1.19",
     "copy-webpack-plugin": "^4.5.4",
     "css-loader": "^1.0.0",
-    "eslint": "^5.7.0",
-    "eslint-loader": "^2.1.1",
+    "eslint": "^5.14.1",
+    "eslint-loader": "^2.1.2",
     "file-loader": "^2.0.0",
-    "html-webpack-plugin": "^4.0.0-beta.2",
-    "mini-css-extract-plugin": "^0.4.4",
-    "node-sass": "^4.9.4",
+    "html-webpack-plugin": "^4.0.0-beta.5",
+    "mini-css-extract-plugin": "^0.4.5",
+    "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
-    "webpack": "^4.21.0",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.9",
-    "webpack-merge": "^4.1.4"
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.0",
+    "webpack-merge": "^4.2.1"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.0.0",
+    "@babel/polyfill": "^7.2.5",
     "classie": "^1.0.0",
-    "flickity": "^2.1.2",
+    "desandro-classie": "^1.0.1",
+    "flickity": "^2.2.0",
     "gh-pages": "^2.0.1",
+    "image-webpack-loader": "^4.6.0",
+    "imagemin-webpack-plugin": "^2.4.2",
     "imagesloaded": "^4.1.4",
+    "intersection-observer": "^0.5.1",
+    "lozad": "^1.9.0",
     "modernizr": "^3.6.0",
+    "modernizr-webpack-plugin": "^1.0.7",
     "smoothscroll": "^0.4.0",
     "support": "^1.1.4"
   }

@@ -34,7 +34,7 @@ module.exports = merge(common, {
         loader: 'babel-loader'
       },
       {
-        test: /\.s?css$/i,
+        test: /\.scss$/,
         use: ['style-loader', 'css-loader?sourceMap=true', 'sass-loader']
       }
     ]

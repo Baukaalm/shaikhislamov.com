@@ -1,5 +1,5 @@
 
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 $neon-color:rgb(211, 1, 71);
 
 $neon-color-light:#fff;
@@ -44,7 +44,7 @@ $neon-color-light:#fff;
 
 /* General styles */
 body {
-	background:linear-gradient(to left,darken(#4568dc, 50%), darken(#b36a74, 50%));
+	background:linear-gradient(to left,darken(#4568dc, 50%), darken(#1F22A5, 50%));
 	color: #fff;
 	font-size: 1em;
 	overflow: hidden;
@@ -53,6 +53,7 @@ body {
 	font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	-webkit-tap-highlight-color: transparent;
 }
 
 a {
@@ -194,8 +195,10 @@ button:focus {
 }
 
 .hero > div {
-  background: #005b96 url(/public/img/bg.jpg) no-repeat 50% 0;
+  
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: 100% 0%; 
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 }
@@ -354,7 +357,7 @@ button:focus {
 	margin: 0 0 0 -15px;
 	left: 50%;
 	top: 10px; 
-	background: url(/public/img/arrow-colored.svg) no-repeat center center;
+	background: url('~/public/img/arrow-colored.svg') no-repeat center center;
 	-webkit-transition: -webkit-transform 0.5s, opacity 0.3s;
 	transition: transform 0.5s, opacity 0.3s;
 	-webkit-transition-timing-function: cubic-bezier(0.6,0,0.4,1);
@@ -374,9 +377,9 @@ button:focus {
 .stack.stack-next .stack-title::after {
 	content: '';
 	top: 1.65em;
-	background: url(/public/img/arrow-gray.svg) no-repeat center center;
+	background: url('~/public/img/arrow-gray.svg') no-repeat center center;
 }
-
+ 
 .stack.stack-prev .stack-title::after {
 	right: 0;
 	-webkit-transform: rotate3d(0,0,1,-90deg);
@@ -467,7 +470,7 @@ button:focus {
 }
 
 .item {
-	padding: 0 5% 5%;
+	padding: 0 0 5%;
 	opacity: 0;
 	width: 100%;
 	position: relative;
@@ -478,6 +481,7 @@ button:focus {
 	transition: transform 0.5s, opacity 0.5s;
 	-webkit-transition-timing-function: cubic-bezier(0.6,0,0.4,1);
 	transition-timing-function: cubic-bezier(0.6,0,0.4,1);
+	will-change:transform;
 }
 
 .move-items .is-selected .item {
@@ -637,7 +641,6 @@ button:focus {
 
 .icon {
 	font-family: 'camera-icons';
-	speak: none;
 	font-style: normal;
 	font-weight: normal;
 	font-variant: normal;
@@ -784,3 +787,36 @@ button:focus {
 		transform: translate3d(0, 40vh, 0);
 	}
 }
+
+.progressive {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	outline: none;
+  }
+  
+  .progressive img {
+	display: block;
+	width: 100%;
+	max-width: none;
+	height: auto;
+	border: 0 none;
+  }
+  
+  .progressive img.preview {
+	filter: blur(2vw);
+	transform: scale(1.05);
+  }
+  
+  .progressive img.reveal {
+	position: absolute;
+	left: 0;
+	top: 0;
+	will-change: transform, opacity;
+	animation: progressiveReveal 1s ease-out;
+  }
+  
+  @keyframes progressiveReveal {
+	  0% { transform: scale(1.05); opacity: 0; }
+	  100% { transform: scale(1); opacity: 1; }
+  }

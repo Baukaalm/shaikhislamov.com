@@ -2,6 +2,7 @@ const Webpack = require('webpack');
 const merge = require('webpack-merge');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const common = require('./webpack.common.js');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 module.exports = merge(common, {
   mode: 'production',
@@ -13,6 +14,7 @@ module.exports = merge(common, {
     chunkFilename: 'js/[name].[chunkhash:8].chunk.js'
   },
   plugins: [
+    new ImageminPlugin(),
     new Webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
