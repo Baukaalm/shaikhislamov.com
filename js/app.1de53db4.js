@@ -379,16 +379,16 @@ function initEvents() {
 document.addEventListener('DOMContentLoaded', function () {
   init();
 }, false);
-// EXTERNAL MODULE: ./node_modules/lozad/dist/lozad.min.js
-var lozad_min = __webpack_require__(42);
-var lozad_min_default = /*#__PURE__*/__webpack_require__.n(lozad_min);
+// EXTERNAL MODULE: ./node_modules/vanilla-lazyload/dist/lazyload.min.js
+var lazyload_min = __webpack_require__(42);
+var lazyload_min_default = /*#__PURE__*/__webpack_require__.n(lazyload_min);
 
 // CONCATENATED MODULE: ./src/scripts/lozad.js
 
-setTimeout(function () {
-  var observer = lozad_min_default()();
-  observer.observe();
-}, 100);
+var lazyLoadInstance = new lazyload_min_default.a({
+  elements_selector: ".lozad" // ... more custom settings?
+
+});
 // CONCATENATED MODULE: ./src/scripts/index.js
 
 
@@ -397,4 +397,4 @@ setTimeout(function () {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.6e239f6f.js.map
+//# sourceMappingURL=app.1de53db4.js.map
