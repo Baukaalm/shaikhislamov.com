@@ -386,8 +386,8 @@ var lazyload_min_default = /*#__PURE__*/__webpack_require__.n(lazyload_min);
 // CONCATENATED MODULE: ./src/scripts/lozad.js
 
 var lazyLoadInstance = new lazyload_min_default.a({
-  elements_selector: ".lozad" // ... more custom settings?
-
+  elements_selector: ".lozad",
+  container: document.querySelector('.stack.is-selected')
 });
 // CONCATENATED MODULE: ./src/scripts/index.js
 
@@ -397,4 +397,4 @@ var lazyLoadInstance = new lazyload_min_default.a({
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.1de53db4.js.map
+//# sourceMappingURL=app.7c09a46a.js.map
