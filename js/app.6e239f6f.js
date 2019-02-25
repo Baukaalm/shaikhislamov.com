@@ -385,8 +385,10 @@ var lozad_min_default = /*#__PURE__*/__webpack_require__.n(lozad_min);
 
 // CONCATENATED MODULE: ./src/scripts/lozad.js
 
-var observer = lozad_min_default()();
-observer.observe();
+setTimeout(function () {
+  var observer = lozad_min_default()();
+  observer.observe();
+}, 100);
 // CONCATENATED MODULE: ./src/scripts/index.js
 
 
@@ -395,4 +397,4 @@ observer.observe();
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.a0ae086e.js.map
+//# sourceMappingURL=app.6e239f6f.js.map
